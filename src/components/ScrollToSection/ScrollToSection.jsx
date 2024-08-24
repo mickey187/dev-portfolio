@@ -21,6 +21,8 @@ const ScrollToSection = () => {
   const skillsRef = useRef(null);
   const blogRef = useRef(null);
   const contactRef = useRef(null);
+  const hireMeRef = useRef(null);
+  
 
   const location = useLocation();
 
@@ -62,6 +64,7 @@ const ScrollToSection = () => {
       <div ref={contactRef}>
         <Contact />
       </div>  
+      
     </div>
       
     </>

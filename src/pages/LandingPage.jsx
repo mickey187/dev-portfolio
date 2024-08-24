@@ -1,17 +1,26 @@
+import { Link } from "react-router-dom";
 import twitter from "../assets/svg/twitter.svg";
 import github from "../assets/svg/github.svg";
 import linkedIn from "../assets/svg/in.svg";
 import instagram from "../assets/svg/instagram.svg";
 import coderIllustraion from "../assets/img/coder-illustration-3.jpg";
+import upworkIcon from "../assets/svg/upwork-icon.svg";
+import fiverrIcon from "../assets/svg/fiverr-icon.svg";
+
 const LandingPage = () => {
   return (
     <>
       <div className=" h-lvh py-32 ">
-        <div className="flex flex-row  space-x-10 px-10  ">
-          <div className="w-[10%]">
-            <ul className="space-y-6">
+        <div className="flex flex-col md:flex-row md:space-x-10 px-10">
+          <div className="w-full md:w-[10%] mb-10 md:mb-0">
+            <ul className="flex md:flex-col justify-center md:justify-start space-x-6 md:space-x-0 md:space-y-6">
+              
               <li>
-                <a href="https://github.com/mickey187" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/mickey187"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img src={github} alt="" />{" "}
                 </a>
               </li>
@@ -32,30 +41,33 @@ const LandingPage = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col w-[40%] pt-10">
-            <h1 className="font-gugi text-6xl">Full-Stack</h1>
-            <h1 className="font-gugi text-6xl mt-3 text-[#000aff]">
+          <div className="flex flex-col w-full md:w-[40%] pt-10">
+            <h1 className="font-gugi text-4xl md:text-6xl">Full-Stack</h1>
+            <h1 className="font-gugi text-4xl md:text-6xl mt-3 text-[#000aff]">
               Developer.
             </h1>
-            <p className="font-roboto text-xl text-wrap  mt-3">
+            <p className="font-roboto text-lg md:text-xl mt-3">
               Helping people turn their ideas into sites & apps that work.
               Professional and Cost-Effective.
             </p>
             <div className="mt-5">
-              <div>
-                <button className="w-48 h-14 rounded-md font-bold bg-[#000aff] text-white">
+              <div className="">
+                <Link
+                  to="/contact"
+                  className="w-full md:w-48 h-14 rounded-md font-bold bg-[#000aff] text-white flex items-center justify-center"
+                >
                   HIRE ME
-                </button>
+                </Link>
               </div>
               <div>
-                <button className="w-48 h-14 rounded-md font-bold bg-transparent mt-4 text-indigo-500 border border-indigo-400">
+                <button className="w-full md:w-48 h-14 rounded-md font-bold bg-transparent mt-4 text-indigo-500 border border-indigo-400">
                   View Projects
                 </button>
               </div>
             </div>
           </div>
 
-          <div className="w-1/2">
+          <div className="w-full md:w-1/2 hidden md:block">
             <img src={coderIllustraion} alt="" />
           </div>
         </div>

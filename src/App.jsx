@@ -11,6 +11,7 @@ import "./App.css";
 import NavBar from "./components/Navbar/NavBar";
 import LandingPage from "./pages/LandingPage";
 import ScrollToSection from "./components/ScrollToSection/ScrollToSection";
+import Footer from "./pages/Footer";
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/contact" element={<ScrollToSection />} />
         </Routes>
       </Router>
+      <Footer/>
     </>
   );
 }
