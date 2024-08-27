@@ -41,32 +41,63 @@ const NavBar = () => {
 
         {/* Sidebar for smaller screens */}
         <div
-          className={`fixed inset-0 bg-gray-800 bg-opacity-75 z-40 lg:hidden transform ${
+          className={`fixed inset-0 bg-gray-800  z-40 lg:hidden transform ${
             isSidebarOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 ease-in-out`}
         >
           <div className="flex justify-end p-4">
-            <button onClick={() => setIsSidebarOpen(false)} className="text-white text-2xl">
+            <button
+              onClick={() => setIsSidebarOpen(false)}
+              className="text-white text-2xl"
+            >
               <FaTimes />
             </button>
           </div>
           <div className="flex flex-col items-center mt-10 space-y-6">
-            <Link to="/" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>Home</Link>
-            <Link to="/about" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>About</Link>
-            <Link to="/projects" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>Projects</Link>
-            <Link to="/skills" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>Skills</Link>
-            <Link to="/blog" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>Blog</Link>
-            <Link to="/contact" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>Contact</Link>
+            <Link to="/" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>
+              Home
+            </Link>
+            <Link to="/about" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>
+              About
+            </Link>
+            <Link to="/projects" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>
+              Projects
+            </Link>
+            <Link to="/skills" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>
+              Skills
+            </Link>
+            <Link to="/blog" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>
+              Blog
+            </Link>
+            <Link to="/contact" className="text-white text-lg" onClick={() => setIsSidebarOpen(false)}>
+              Contact
+            </Link>
+            <a
+              href="/resume.pdf"
+              download
+              className="bg-[#000aff] text-white py-2 px-4 rounded-md shadow-sm hover:bg-green-600"
+            >
+              Resume
+            </a>
           </div>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex lg:flex-row space-x-4 font-roboto">
-          <Link to="/about">About</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/skills">Skills</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/contact">Contact</Link>
+        <div className="hidden lg:flex lg:flex-row space-x-4 font-roboto items-center">
+          <Link to="/about" className="hover:text-[#000aff]">About</Link>
+          <Link to="/projects" className="hover:text-[#000aff]">Projects</Link>
+          <Link to="/skills" className="hover:text-[#000aff]">Skills</Link>
+          <Link to="/blog" className="hover:text-[#000aff]">Blog</Link>
+          <Link to="/contact" className="hover:text-[#000aff]">Contact</Link>
+
+          {/* Resume Button */}
+          <a
+            href="/resume.pdf"
+            download
+            className="hover:bg-[#000aff] hover:text-white py-2 px-4 rounded-md transition-all duration-300"
+          >
+            Resume
+          </a>
         </div>
       </nav>
     </>
