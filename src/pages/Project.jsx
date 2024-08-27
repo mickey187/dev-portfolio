@@ -1,117 +1,104 @@
+import arrowOutWardIcon from "../assets/svg/arrow_outward.svg";
+import kuushIcon from "../assets/img/kuush.png";
+import hrsIcon from "../assets/img/hrs.png";
+import shortlyIcon from "../assets/img/shortly.png";
+import schoolIcon from "../assets/img/school.png";
+import shoopingIcon from "../assets/img/online-shopping.jpg";
+
+const projectData = [
+  {
+    id: 1,
+    title: "Kuush Music Streaming",
+    description:
+      "As a backend engineer at Kush, I developed RESTful APIs using Node.js/Express.js and MongoDB, managed audio file uploads, and integrated AWS S3 for scalable storage, ensuring seamless music streaming.",
+    image: kuushIcon,
+    link: "https://play.google.com/store/apps/details?id=com.kushrecord&pcampaignid=web_share",
+    technologies: ["Node.Js", "Express.Js", "MongoDB"],
+  },
+  {
+    id: 2,
+    title: "School SaaS App",
+    description:
+      "Developed a school SaaS application using the Laravel/Livewire stack, focusing on features like student management, attendance tracking, and real-time reporting to streamline school operations and enhance administrative efficiency.",
+    image: schoolIcon,
+    link: "https://dev.harambeeuniversity.edu.et/",
+    technologies: ["Laravel", "Livewire","Tailwind", "MySQL"],
+  },
+  {
+    id: 3,
+    title: "College Insight Dashboard",
+    description:
+      "Designed and built a college insight dashboard using Laravel/Livewire, providing data analytics and visualizations to help administrators make informed decisions based on applicant data.",
+    image: hrsIcon,
+    link: "http://197.156.112.157:8000/login",
+    technologies: ["Laravel", "Livewire","Tailwind", "MySQL"],
+  },
+  {
+    id: 4,
+    title: "URL Shortener",
+    description:
+      "I developed a URL shortening service using Node.js, Express.js, and MySQL, featuring custom short URLs, analytics tracking, and a simple user interface.",
+    image: shortlyIcon,
+    link: "https://url.bunaweb.com",
+    technologies: ["React", "Tailwind", "Node.Js", "Express.Js", "MongoDB"],
+  },
+
+  {
+    id: 5,
+    title: "E-Shop",
+    description:
+      "I built a full-stack e-commerce platform with the MERN stack, featuring product management, Stripe payment integration, and a responsive UI for a seamless shopping experience.",
+    image:
+    shoopingIcon,
+    link: "https://url.bunaweb.com",
+    technologies: ["React", "Tailwind", "Node.Js", "Express.Js", "MongoDB"],
+  },
+];
+
 const Project = () => {
   return (
     <>
       {/* <!-- Grid container --> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mx-4 md:mx-10 mt-10">
-        {/* <!-- Grid item 1 --> */}
-        <div className="flex flex-col md:flex-row space-x-0 md:space-x-2 bg-white rounded-lg shadow">
-          <div className="w-full md:w-1/4">
-            <img
-              className="w-full h-full object-cover rounded-t-lg md:rounded-none md:rounded-l-lg"
-              src="https://media.licdn.com/dms/image/v2/D4E35AQH-5Ag_8khacw/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1689180323945?e=1725022800&v=beta&t=a7tOkOQQSf27oV8dCNZddGqorVXwXqiKJxxACUMz_Wg"
-              alt="E-Commerce Project"
-            />
-          </div>
-          <div className="w-full md:w-3/4 p-4">
-            <h3 className="font-roboto font-semibold mt-2">E-Commerce</h3>
-            <p className="font-roboto mt-3 text-justify text-sm md:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-              magni sed aliquam sunt harum rerum aperiam hic neque, quae
-              assumenda officia tenetur impedit, itaque sapiente ullam
-              consequatur fugiat, possimus consectetur?
-            </p>
-            <div className="flex flex-wrap space-x-1 mt-4">
-              <label
-                htmlFor=""
-                className="rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-500"
-              >
-                React
-              </label>
-              <label
-                htmlFor=""
-                className="rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-500"
-              >
-                Tailwind
-              </label>
-              <label
-                htmlFor=""
-                className="rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-500"
-              >
-                Node.Js
-              </label>
-              <label
-                htmlFor=""
-                className="rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-500"
-              >
-                Express.Js
-              </label>
-              <label
-                htmlFor=""
-                className="rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-500"
-              >
-                MongoDB
-              </label>
+        {projectData.map((project) => (
+          <div
+            key={project.id}
+            className="flex flex-col md:flex-row space-x-0 md:space-x-2 bg-white rounded-lg shadow"
+          >
+            <div className="w-full md:w-1/3">
+              <img
+                className="w-full h-44 object-cover rounded-t-lg md:rounded-none md:rounded-l-lg"
+                src={project.image}
+                alt={project.title}
+              />
             </div>
-          </div>
-        </div>
+            <div className="w-full md:w-7/12 p-4">
+              <a
+                href={project.link}
+                rel="noopener noreferrer"
+                target="blank"
+                className="flex flex-row"
+              >
+                <h3 className="font-roboto font-semibold mt-2 underline text-[#000aff]">
+                  {project.title}
+                </h3>
+                <img src={arrowOutWardIcon} alt="" className="ml-1" />
+              </a>
 
-        {/* <!-- Grid item 2 --> */}
-        <div className="flex flex-col md:flex-row space-x-0 md:space-x-2 bg-white rounded-lg shadow">
-          <div className="w-full md:w-1/4">
-            <img
-              className="w-full h-full object-cover rounded-t-lg md:rounded-none md:rounded-l-lg"
-              src="https://media.licdn.com/dms/image/v2/D4E35AQH-5Ag_8khacw/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1689180323945?e=1725022800&v=beta&t=a7tOkOQQSf27oV8dCNZddGqorVXwXqiKJxxACUMz_Wg"
-              alt="URL Shortener Project"
-            />
-          </div>
-          <div className="w-full md:w-3/4 p-4">
-            <h3 className="font-roboto font-semibold mt-2">URL Shortener</h3>
-            <p className="font-roboto mt-3 text-justify text-sm md:text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-              magni sed aliquam sunt harum rerum aperiam hic neque, quae
-              assumenda officia tenetur impedit, itaque sapiente ullam
-              consequatur fugiat, possimus consectetur?
-            </p>
-            <div className="flex flex-wrap space-x-1 mt-4">
-              <label
-                htmlFor=""
-                className="rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-500"
-              >
-                React
-              </label>
-              <label
-                htmlFor=""
-                className="rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-500"
-              >
-                Tailwind
-              </label>
-              <label
-                htmlFor=""
-                className="rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-500"
-              >
-                Node.Js
-              </label>
-              <label
-                htmlFor=""
-                className="rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-500"
-              >
-                Express.Js
-              </label>
-              <label
-                htmlFor=""
-                className="rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-blue-500"
-              >
-                MongoDB
-              </label>
+              <p className="font-roboto mt-3 text-justify text-sm md:text-base">
+                {project.description}
+              </p>
+              <div className="flex flex-wrap space-x-1 mt-4">
+                {project.technologies.map((tech, index) => (
+                  <label
+                    key={index}
+                    className="rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium leading-5 text-[#000aff] my-1"
+                  >
+                    {tech}
+                  </label>
+                ))}
+              </div>
             </div>
-          </div>
-        </div>
-
-        {/* <!-- Grid item 3-6 --> */}
-        {[3, 4, 5, 6].map((item) => (
-          <div key={item} className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-xl font-semibold mb-4">Item {item}</h2>
-            <p>This is the content of grid item {item}.</p>
           </div>
         ))}
       </div>

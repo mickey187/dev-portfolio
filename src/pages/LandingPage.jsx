@@ -47,8 +47,7 @@ const LandingPage = () => {
               Developer.
             </h1>
             <p className="font-roboto text-lg md:text-xl mt-3">
-              Helping people turn their ideas into sites & apps that work.
-              Professional and Cost-Effective.
+            Turning Concepts into High-Performing Websites & Apps. Your Vision, Our Expertise.
             </p>
             <div className="mt-5">
               <div className="">
@@ -60,7 +59,7 @@ const LandingPage = () => {
                 </Link>
               </div>
               <div>
-                <button className="w-full md:w-48 h-14 rounded-md font-bold bg-transparent mt-4 text-indigo-500 border border-indigo-400">
+                <button className="w-full md:w-48 h-14 rounded-md font-bold bg-transparent mt-4 text-[#000aff] border border-indigo-400">
                   View Projects
                 </button>
               </div>

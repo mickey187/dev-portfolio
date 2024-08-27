@@ -3,7 +3,7 @@ import upworkIcon from "../assets/svg/upwork.svg";
 const Contact = () => {
   return (
     <>
-      <div className="mx-5 sm:mx-10 mt-5 sm:mt-10 py-3">
+      <div className="mx-5 sm:mx-10 mt-5 sm:mt-10 py-3 bg-white rounded-lg p-3">
         <div className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-10">
           {/* Left Column */}
           <div className="w-full sm:w-1/2">
@@ -23,7 +23,7 @@ const Contact = () => {
                   Email:{" "}
                   <a
                     href="mailto:michiashailu@gmail.com"
-                    className="text-blue-500 underline"
+                    className="text-[#000aff] underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -36,7 +36,7 @@ const Contact = () => {
                   LinkedIn:{" "}
                   <a
                     href="https://www.linkedin.com/in/michias-hailu-859135213/"
-                    className="text-blue-500 underline"
+                    className="text-[#000aff] underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -75,7 +75,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               <div className="mx-0 sm:mx-10">
-                <button className="w-full h-10 bg-blue-700 text-white rounded-lg font-bold">
+                <button className="w-full h-10 bg-[#000aff] text-white rounded-lg font-bold">
                   Submit
                 </button>
               </div>

@@ -16,7 +16,7 @@ function ProgressBar({ initialPercentage = 5, targetPercentage = 85, duration = 
         style={{
           width: `${percentage}%`,
           transitionDuration: `${duration / 1000}s`,
-          backgroundColor: percentage >= targetPercentage ? '#491ef7' : '#896df7',
+          backgroundColor: percentage >= targetPercentage ? '#000aff' : '#896df7',
         }}
       />
     </div>
