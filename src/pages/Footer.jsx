@@ -2,6 +2,9 @@ import twitter from "../assets/svg/twitter.svg";
 import github from "../assets/svg/github.svg";
 import linkedIn from "../assets/svg/in.svg";
 import instagram from "../assets/svg/instagram.svg";
+import coderIllustraion from "../assets/img/coder-illustration-3.jpg";
+import upworkIcon from "../assets/svg/upwork-icon.svg";
+import fiverrIcon from "../assets/svg/fiverr.svg";
 import coderIllustration from "../assets/img/coder-illustration-3.jpg";
 
 const Footer = () => {
@@ -17,9 +20,9 @@ const Footer = () => {
                 href="https://github.com/mickey187"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 sm:w-10 sm:h-10"
+                className="w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-full"
               >
-                <img src={github} alt="GitHub" className="w-full h-full object-contain" />
+                <img src={github} alt="GitHub" className=" object-contain"  width="48" height="48" />
               </a>
               <a
                 href="https://www.linkedin.com/in/michias-hailu-859135213/"
@@ -27,23 +30,23 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-8 h-8 sm:w-10 sm:h-10"
               >
-                <img src={linkedIn} alt="LinkedIn" className="w-full h-full object-contain" />
+                <img src={linkedIn} alt="LinkedIn" className=" object-contain"  width="48" height="48" />
               </a>
               <a
-                href="https://twitter.com/"
+                href="https://www.upwork.com/freelancers/~019e59c7669fe9fa7c?mp_source=share"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 sm:w-10 sm:h-10"
               >
-                <img src={twitter} alt="Twitter" className="w-full h-full object-contain" />
+                <img src={upworkIcon} alt="Upwrok" className=" object-contain rounded-full"   width="48" height="48"/>
               </a>
               <a
-                href="https://www.instagram.com/"
+                href=" https://www.fiverr.com/mickeyhailu1998"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 sm:w-10 sm:h-10"
               >
-                <img src={instagram} alt="Instagram" className="w-full h-full object-contain" />
+                <img src={fiverrIcon} alt="Fiverr" className=" object-contain"  width="48" height="48" />
               </a>
             </div>
           </div>

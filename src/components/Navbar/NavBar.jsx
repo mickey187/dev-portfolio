@@ -75,7 +75,7 @@ const NavBar = () => {
             <a
               href="/resume.pdf"
               download
-              className="bg-[#000aff] text-white py-2 px-4 rounded-md shadow-sm hover:bg-green-600"
+              className="bg-[#000aff] text-white py-2 px-4 rounded-md shadow-sm hover:bg-[#000aff]"
             >
               Resume
             </a>
