@@ -1,10 +1,12 @@
 import { useState } from "react";
+
 import axios from "axios";
 import Alert from "@mui/material/Alert";
 import CircularProgress from "@mui/material/CircularProgress";
 import upworkIcon from "../assets/svg/upwork.svg";
 
 const Contact = () => {
+  const baseApiUrl = import.meta.env.VITE_APP_API_BASE_URL;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,9 +30,11 @@ const Contact = () => {
     setLoading(true);
     try {
       // console.log(formData);
+      console.log(baseApiUrl);
+      
 
       const response = await axios.post(
-        `http://localhost:3001/submit-form`,
+        `${baseApiUrl}/submit-form`,
         JSON.stringify(formData),
         {
           headers: {
@@ -38,13 +42,7 @@ const Contact = () => {
           },
         }
       );
-      // const response = await fetch("http://192.168.1.102:3001/submit-form", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(formData),
-      // });
+      
       console.log(response);
 
       if (response.data.success) {
